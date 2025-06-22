@@ -1,0 +1,45 @@
+@import "global";
+@import "fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  color: $onyx;
+  height: 100vh;
+  background-color: #FBFBFB;
+  background-image: url("../images/header-gradient.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: cover
+}
+
+html{
+  scroll-behavior: smooth; // Убираем плавность прокрутки
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex: 0 0 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

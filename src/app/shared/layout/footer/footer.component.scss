@@ -1,0 +1,118 @@
+@import "../../../../assets/styles/variables";
+
+
+.footer {
+  background-image: url("../../../../assets/images/footer-gradient.png");
+  background-position: 50% 60%;
+  background-size: auto;
+  padding: 74px 0 32px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      img {
+        width: 92px;
+        height: auto;
+      }
+
+      &-text {
+        font-family: "Inter Medium";
+        font-size: 14px;
+        color: $onyx;
+      }
+    }
+
+    .footer-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+
+      .footer-item {
+        min-width: 140px;
+
+        &-header {
+          font-family: "Inter Bold";
+          margin-bottom: 32px;
+          font-size: 16px;
+        }
+
+        li {
+          font-family: "Inter Regular";
+          list-style: none;
+          margin-bottom: 16px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: scale(1.05);
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    background-size: cover;
+    .container {
+      gap: 35px;
+
+      .footer-logo {
+        &-text {
+          font-size: 13px; // уменьшено с 14px
+        }
+      }
+
+      .footer-items {
+        .footer-item {
+          &-header {
+            font-size: 15px; // уменьшено с 16px
+            margin-bottom: 24px;
+          }
+
+          li {
+            font-size: 15px; // уменьшено с 16px
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 550px) {
+  .footer {
+    .container {
+      flex-direction: column;
+      .footer-logo {
+        &-text {
+          font-size: 12px; // ещё меньше
+        }
+      }
+
+      .footer-items {
+        .footer-item {
+          &-header {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

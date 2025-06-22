@@ -1,0 +1,89 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/fonts";
+
+.vertical-line {
+  overflow: hidden;
+  left: 0;
+  top: 400px;
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.1;
+  margin: 40px 0;
+  position: absolute;
+}
+
+.contacts {
+  padding-bottom: 100px;
+
+  .container {
+    .contacts-header {
+      position: relative;
+      font-weight: 700;
+      font-size: 80px;
+      font-family: "Inter Bold";
+      margin-top: 120px;
+      margin-bottom: 120px;
+
+      p {
+        font-family: "Inter Regular";
+        color: #808080;
+        font-weight: 400;
+        font-size: 24px;
+      }
+    }
+
+    .contacts-block {
+      .contacts-link {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .vertical-line{
+    display: none;
+  }
+
+
+  .contacts {
+    .container {
+      .contacts-header {
+        font-size: 56px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Адаптивность для мобильных max-width: 700px */
+@media (max-width: 700px) {
+  .contacts {
+    .container {
+      .contacts-header {
+        font-size: 36px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        p {
+          font-size: 16px;
+        }
+      }
+      .contacts-block {
+      .contacts-link {
+        font-size: 18px;
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+    }
+    }
+  }
+}

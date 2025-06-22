@@ -1,0 +1,446 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/fonts";
+
+.main {
+  padding: 100px 0;
+  color: $onyx;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    position: relative;
+
+    .main-header {
+      font-family: "Inter Bold";
+      font-size: 80px;
+      color: $onyx;
+
+      span {
+        color: #808080;
+      }
+    }
+
+    .main-text {
+      font-family: "Inter Medium";
+      max-width: 740px;
+      color: #808080;
+      font-size: 24px;
+      line-height: 150%;
+      z-index: 2;
+    }
+
+    .main-action {
+
+
+      button {
+        border: 0;
+        cursor: pointer;
+        border-radius: 9px;
+        padding: 16px 32px;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: "Inter Medium";
+        transition: transform 0.2s ease;
+
+        &:first-child {
+          box-shadow: inset 0 2px 4px 0 rgba(255, 255, 255, 0.08), inset 0 1px 2px 0 rgba(255, 255, 255, 0.02);
+          background: linear-gradient(180deg, #1a1a1a 0%, #131313 100%);
+          color: white;
+          margin-right: 16px;
+        }
+
+        &:last-child {
+          background-color: #F3F3F3;
+          color: $onyx;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .main-photo {
+      width: 270px;
+      position: absolute;
+      top: -20%;
+      left: 75%;
+      z-index: 1;
+    }
+  }
+}
+
+
+.projects {
+  padding: 100px 0;
+
+  .container {
+    .projects-header {
+      font-weight: 700;
+      font-size: 48px;
+      font-family: "Inter Bold";
+      margin-bottom: 32px;
+    }
+
+    .projects-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .project-card {
+        overflow: hidden;
+
+        padding: 60px;
+        border: 1px solid #EBEBEB;
+        background: #F6F6F6;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 32px;
+        z-index: 1;
+        box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.1);
+
+        .project-card-icon {
+          margin-bottom: 16px;
+
+          img {
+
+            height: 70px;
+          }
+        }
+
+        .project-card-header {
+          font-weight: 800;
+          font-size: 32px;
+          font-family: "Inter Bold";
+          margin-bottom: 16px;
+        }
+
+        .project-card-description {
+          max-width: 503px;
+          font-weight: 400;
+          height: 263px;
+          font-size: 16px;
+          font-family: "Inter Regular";
+          color: #808080;
+          margin-bottom: 16px;
+        }
+
+        .project-card-link {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }
+
+        .project-card-image {
+          position: absolute;
+          top: 10%;
+          right: -15%;
+          z-index: 2;
+
+          img {
+            max-width: 560px;
+            min-width: 500px;
+            max-height: 470px;
+
+          }
+        }
+      }
+    }
+
+    .projects-link {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+
+.me {
+  .container {
+    .me-header {
+      font-weight: 700;
+      font-size: 48px;
+      font-family: "Inter Bold";
+      margin-bottom: 32px;
+    }
+
+    .me-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+
+      .me-card {
+        cursor: pointer;
+        overflow: hidden;
+        box-sizing: border-box;
+        flex: 1 1 300px;
+        padding: 60px;
+        max-width: 500px;
+        text-align: center;
+        border: 1px solid #EBEBEB;
+        background: #F6F6F6;
+        border-radius: 32px;
+        position: relative;
+
+        .me-card-header {
+          font-family: "Inter Bold";
+          font-weight: 800;
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 16px;
+        }
+
+        .me-card-description {
+          color: #808080;
+          font-weight: 400;
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .me-card-image {
+
+          .sticker {
+            width: 300px;
+            margin-left: 20px;
+          }
+
+          .tech {
+
+            bottom: 0;
+            left: 0;
+            position: absolute;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 60px 0;
+
+    .container {
+      gap: 24px;
+
+      .main-header {
+        font-size: 56px;
+      }
+
+      .main-text {
+        width: 65%;
+        max-width: none;
+
+
+        font-size: 20px;
+      }
+
+      .main-photo {
+        width: 230px;
+        left: 70%;
+        top: -15%;
+      }
+
+      .main-action {
+        button {
+          font-size: 16px;
+          padding: 12px 24px;
+        }
+      }
+    }
+  }
+
+  .projects {
+    padding: 60px 0;
+
+    .container {
+      .projects-header {
+        font-size: 40px;
+      }
+
+      .projects-cards {
+        .project-card {
+          padding: 40px;
+
+          .project-card-header {
+            font-size: 28px;
+          }
+
+          .project-card-description {
+            max-width: 55%;
+            font-size: 15px;
+            height: auto;
+          }
+
+          .project-card-image {
+            top: 15%;
+
+            img {
+              max-width: 400px;
+              min-width: 300px;
+              max-height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .me {
+    .container {
+      .me-header {
+        font-size: 40px;
+      }
+
+      .me-cards {
+
+        .me-card {
+          width: 100%;
+          padding: 40px;
+          height: 355px;
+
+          .me-card-header {
+            font-size: 28px;
+          }
+
+          .me-card-description {
+            font-size: 15px;
+          }
+
+          .me-card-image {
+
+
+            .sticker {
+              width: 200px;
+            }
+
+            .tech {
+              top: 145px;
+              left: 0px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    .container {
+      .main-header {
+        font-size: 40px;
+      }
+
+      .main-text {
+        font-size: 16px;
+        width: 100%;
+      }
+
+      .main-photo {
+        display: none;
+      }
+
+      .main-action {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+
+        button {
+          font-size: 14px;
+
+          &:first-child {
+
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .projects {
+    .container {
+      .projects-header {
+        font-size: 32px;
+       
+      }
+
+      .projects-cards {
+        .project-card {
+          padding: 24px;
+
+          .project-card-icon {
+            img {
+
+              height: 50px;
+            }
+          }
+
+          .project-card-header {
+            font-size: 24px;
+          }
+
+          .project-card-description {
+            font-size: 14px;
+            max-width: 100%;
+          }
+
+          .project-card-image {
+            display: none;
+          }
+        }
+      }
+
+      .projects-link {
+        // justify-content: center;
+      }
+    }
+  }
+
+  .me {
+    .container {
+      .me-header {
+        font-size: 32px;
+        // text-align: center;
+      }
+
+      .me-cards {
+        flex-direction: column;
+        align-items: center;
+
+        .me-card {
+          padding: 32px;
+
+          .me-card-header {
+            font-size: 24px;
+          }
+
+          .me-card-description {
+            font-size: 14px;
+          }
+
+          .me-card-image {
+            .sticker {
+              width: 200px;
+            }
+
+            .tech {
+              top: 125px;
+              left: 0px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

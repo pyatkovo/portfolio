@@ -1,0 +1,149 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/fonts";
+
+.vertical-line {
+    overflow: hidden;
+    left: 0;
+    top: 400px;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.1;
+    margin: 40px 0;
+    position: absolute;
+}
+
+.stack {
+    padding-bottom: 100px;
+
+    .container {
+        .stack-header {
+            position: relative;
+            font-weight: 700;
+            font-size: 80px;
+            font-family: "Inter Bold";
+            margin-top: 120px;
+            margin-bottom: 120px;
+
+            p {
+                font-family: "Inter Regular";
+                color: #808080;
+                font-weight: 400;
+                font-size: 24px;
+            }
+        }
+
+        .stack-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+
+            .stack-card {
+                aspect-ratio: 11 / 10;
+                /* Примерно 330x300 = 11:10 */
+                background-color: #F3F3F3;
+                border: 1px solid #EBEBEB;
+                box-sizing: border-box;
+                border-radius: 12px;
+                flex-direction: column;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+
+                .stack-card-icon {
+                    img {
+                        width: 110px;
+                        height: 110px;
+                        object-fit: contain;
+                    }
+                }
+
+                .stack-card-info {
+                    font-weight: 600;
+                    font-size: 20px;
+                    font-family: "Inter Semibold";
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .vertical-line {
+        display: none;
+    }
+
+    .stack {
+        .container {
+            .stack-header {
+                font-size: 56px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+// Адаптив под мобилки
+@media (max-width: 700px) {
+    .stack {
+        .container {
+            .stack-header {
+                font-size: 36px;
+                margin-top: 60px;
+                margin-bottom: 60px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .stack {
+        .container {
+            .stack-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+
+                .stack-card {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 90px;
+                    padding: 0 16px;
+                    gap: 25px;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+
+                    .stack-card-icon {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .stack-card-info {
+                        font-size: 16px;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

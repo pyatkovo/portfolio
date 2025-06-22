@@ -1,0 +1,215 @@
+@import "../../../../assets/styles/variables";
+
+.header {
+  padding: 32px 0;
+
+  .header-container {
+    padding: 17px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid $white-25;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    background: $white-25;
+
+
+    .header-logo {
+      cursor: pointer;
+
+      img {
+
+      }
+    }
+
+    .header-menu {
+      nav {
+        ul {
+          display: flex;
+          gap: 24px;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            color: $onyx;
+            transition: transform 0.2s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .burger {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 1001;
+
+        span {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $onyx;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
+
+        &.open {
+          span {
+            &:nth-child(1) {
+              transform: translateY(8px) rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              transform: translateY(-8px) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+
+    .header-other {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+
+      .header-other-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+
+        svg {
+          cursor: pointer;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        #line {
+          cursor: default;
+        }
+
+      }
+
+      .header-other-switch {
+
+
+        svg {
+          cursor: pointer;
+
+
+          &:hover {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); // полупрозрачный чёрный
+  z-index: 9; // ниже меню, но выше всего остального
+}
+
+
+@media (max-width: 700px) {
+  .container {
+    position: relative;
+    padding: 0;
+
+    .header {
+      position: relative;
+      z-index: 100;
+      .header-container {
+        border: 0;
+        background-color: transparent;
+        .header-logo{
+          position: relative;
+          display: flex;
+          z-index: 200;
+        }
+        .header-menu {
+          .burger {
+            position: relative;
+            display: flex;
+            z-index: 200;
+
+          }
+
+          nav {
+            width: 100%;
+            height: 280px;
+            box-sizing: border-box;
+            position: absolute;
+            top: -40px;
+            right: 0;
+
+            background: white;
+
+
+            border: 1px solid $white-25;
+            border-radius: 0px 0px 12px 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            z-index: 100;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            pointer-events: none;
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: 18px;
+              margin: 60px 0 10px 0;
+              padding: 0;
+              list-style: none;
+              li{
+                &:hover {
+                  transform: none;
+                }
+              }
+            }
+
+            &.open {
+              max-height: 400px;
+              opacity: 1;
+              pointer-events: auto;
+
+            }
+          }
+        }
+
+        .header-other {
+          display: none;
+        }
+      }
+    }
+  }
+}
