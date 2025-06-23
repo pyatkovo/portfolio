@@ -91,6 +91,11 @@
       gap: 32px;
 
       .project-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+
+
         overflow: hidden;
 
         padding: 60px;
@@ -371,7 +376,7 @@
     .container {
       .projects-header {
         font-size: 32px;
-       
+
       }
 
       .projects-cards {
