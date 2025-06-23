@@ -1,27 +1,33 @@
-# Portfolio
+# 💼 Личный сайт-портфолио — pyatkovo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-blue?style=flat-square)
+![Angular](https://img.shields.io/badge/Built%20with-Angular%2014-dd0031?style=flat-square&logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/Styled%20with-SCSS-hotpink?style=flat-square)
 
-## Development server
+## 🌐 Сайт в продакшене
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+👉 [https://pyatkovo.github.io/portfolio](https://pyatkovo.github.io/portfolio)
 
-## Code scaffolding
+## 📌 О проекте
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Это личное портфолио-фронтенд, созданное мной с нуля с использованием **Angular 14**, **TypeScript** и **SCSS**.  
+Цель — представить себя как веб-разработчика, показать проекты, описать стек и немного рассказать о себе.
 
-## Build
+## 🧑‍💻 Что внутри
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- ✨ Главная страница с кратким представлением
+- 📂 Раздел с проектами (ссылки, описания, превью)
+- 🧾 Биография и навыки
+- 📱 Адаптивная верстка для мобильных устройств
+- 🖼️ Все картинки и стили локальные
+- ⚙️ Без стороннего бэкенда — чистый SPA
 
-## Running unit tests
+## 🛠️ Стек технологий
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular 14**
+- **TypeScript**
+- **SCSS**
+- **HTML5**
+- **GitHub Pages** для деплоя
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
