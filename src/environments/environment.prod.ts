@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  api: 'https://portfolio-backend.store/wp-json/wp/v2/'
 };

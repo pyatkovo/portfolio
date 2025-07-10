@@ -10,6 +10,7 @@ import { ProjectsComponent } from './views/projects/projects.component';
 import { AboutComponent } from './views/about/about.component';
 import { ContactsComponent } from './views/contacts/contacts.component';
 import { StackComponent } from './views/stack/stack.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { StackComponent } from './views/stack/stack.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
