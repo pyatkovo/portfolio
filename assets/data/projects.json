@@ -1,0 +1,93 @@
+[
+  {
+    "id": "app-distributional",
+    "title": "Приложение загрузки ПО",
+    "description": "Коммерческое приложение, для раздачи файлов, загрузки ПО внутри закрытой локальной сети.",
+    "link": "https://github.com/pyatkovo/AppDistributionPortal",
+    "image": "assets/images/projects/app-dist.webp",
+    "icons": ["angular"],
+    "featured": false
+  },
+  {
+    "id": "svod-object",
+    "title": "Свод Объектов",
+    "description": "Корпоративное приложение для учёта объектов строительства, импорта XML-данных и формирования сводной информации",
+    "link": "https://github.com/pyatkovo/SvodObjectWeb/tree/main",
+    "image": "assets/images/projects/svodobject.webp",
+    "icons": ["angular"],
+    "featured": false
+  },
+  {
+    "id": "iceland",
+    "title": "Тур в Iceland",
+    "description": "Лендинг-проект с визуальным акцентом на контент, адаптивность и чистую верстку.",
+    "link": "https://github.com/pyatkovo/iceland.github.io",
+    "image": "assets/images/projects/iceland.webp",
+    "icons": ["jquery"],
+    "featured": false
+  },
+  {
+    "id": "financial-dashboard",
+    "title": "Дашборд финансов",
+    "description": "Веб-приложение для учета личных доходов и расходов. Позволяет добавлять и редактировать операции, фильтровать их, смотреть статистику и отслеживать баланс.",
+    "link": "https://github.com/pyatkovo/FinancialAppTS",
+    "image": "assets/images/projects/financialApp.webp",
+    "icons": ["angular"],
+    "featured": true
+  },
+  {
+    "id": "freelance-agency",
+    "title": "Фриланс агентство",
+    "description": "Angular-приложение для поиска исполнителей на фриланс-услуги с заявками, блоговой частью и интерактивом вокруг контента.",
+    "link": "https://github.com/pyatkovo/freelance_company",
+    "image": "assets/images/projects/freelance.webp",
+    "icons": ["angular"],
+    "featured": true
+  },
+  {
+    "id": "flower-shop",
+    "title": "Цветочный магазин",
+    "description": "Онлайн-магазин на Angular и TypeScript с каталогом товаров, корзиной, оформлением заказа и личным кабинетом.",
+    "link": "https://github.com/pyatkovo/e-shop_Angular",
+    "image": "assets/images/projects/flower-shop.webp",
+    "icons": ["angular", "typescript"],
+    "featured": true
+  },
+  {
+    "id": "bank-form",
+    "title": "Банковская форма",
+    "description": "Интерфейс формы с акцентом на UX, валидацию полей и аккуратную фронтенд-реализацию.",
+    "link": "https://github.com/pyatkovo/BankTransactionForm",
+    "image": "assets/images/projects/bank-form.webp",
+    "icons": ["typescript"],
+    "featured": false
+  },
+  {
+    "id": "macaroons",
+    "title": "Промо-сайт Macaroons",
+    "description": "Промо-сайт продукта с каталогом, декоративной подачей и адаптивной версткой.",
+    "link": "https://github.com/pyatkovo/macaroons_Angular/tree/main",
+    "image": "assets/images/projects/macaroons.webp",
+    "icons": ["jquery"],
+    "featured": false
+  },
+  {
+    "id": "quiz",
+    "title": "Quiz тест",
+    "description": "Небольшой интерактивный проект с логикой шагов, обработкой ответов и клиентским состоянием.",
+    "link": "https://github.com/pyatkovo/QuizTS/tree/main",
+    "image": "assets/images/projects/quiz.webp",
+    "icons": ["typescript"],
+    "featured": false
+  },
+  {
+    "id": "media-portal",
+    "title": "Тестовый Медиа-портал",
+    "description": "Небольшое тестовое задание, для реализации отображения спортивного медиа портала.",
+    "link": "https://github.com/pyatkovo/QuizTS/tree/main",
+    "image": "assets/images/projects/media-portal.webp",
+    "icons": ["angular"],
+    "featured": false
+  }
+
+]
