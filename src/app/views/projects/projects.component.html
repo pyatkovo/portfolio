@@ -9,21 +9,19 @@
     <div class="project-cards">
       <div class="project-card" *ngFor="let project of projects">
         <div class="project-card-icon">
-          <img *ngIf="project.acf.project_stack.toLowerCase().includes('angular')" src="assets/images/icons/angular.webp">
-          <img *ngIf="project.acf.project_stack.toLowerCase().includes('jquery')" src="assets/images/icons/jquery.webp">
-          <img *ngIf="project.acf.project_stack.toLowerCase().includes('ts')" src="assets/images/icons/typescript.webp">
+          <img *ngFor="let icon of project.icons" [src]="'assets/images/icons/' + icon + '.webp'" [alt]="icon">
         </div>
-        <div class="project-card-header">{{project.acf.project_title}}</div>
-        <div class="project-card-description">{{project.acf.project_description}}
-        </div>
-        <div class="project-card-link"><a href="{{project.acf.project_link}}">Ссылка на проект</a>
+        <div class="project-card-header">{{project.title}}</div>
+        <div class="project-card-description">{{project.description}}</div>
+        <div class="project-card-link">
+          <a [href]="project.link">Ссылка на проект</a>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M15.1696 5C17.273 6.55556 19.1622 8.37278 20.7905 10.4057C20.9302 10.5801 21 10.79 21 11M15.1696 17C17.273 15.4444 19.1622 13.6272 20.7905 11.5943C20.9302 11.4199 21 11.21 21 11M21 11L3 11"
               stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class="project-card-image"><img src="{{project.acf.project_image_link}}"></div>
+        <div class="project-card-image"><img [src]="project.image" [alt]="project.title"></div>
       </div>
     </div>
   </div>

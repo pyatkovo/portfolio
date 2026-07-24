@@ -15,12 +15,6 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projectsService.getProjects().subscribe(data => {
       this.projects = data;
-
-      this.projects.forEach(project => {
-        this.projectsService.getImageUrl(project.acf.project_image).subscribe(url => {
-          project.acf.project_image_link = url;
-        });
-      });
     });
   }
 }

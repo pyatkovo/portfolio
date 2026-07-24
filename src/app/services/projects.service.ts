@@ -1,20 +1,15 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
-import {environment} from "../../environments/environment";
 
 export interface Project {
-  id: number;
-  title: { rendered: string };
-  acf: {
-    project_link: string;
-    project_title: string;
-    project_description: string;
-    project_stack: string;
-    project_image: number;
-    project_image_link?: string;
-  };
+  id: string;
+  title: string;
+  description: string;
   link: string;
+  image: string;
+  icons: string[];
+  featured: boolean;
 }
 
 @Injectable({
@@ -27,13 +22,12 @@ export class ProjectsService {
   }
 
   getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>(environment.api + 'project');
+    return this.http.get<Project[]>('assets/data/projects.json');
   }
 
-  getImageUrl(imageId: number): Observable<string> {
-    return this.http.get<any>(environment.api + 'media/' + imageId)
-      .pipe(map(response => response.source_url)
-      );
+  getFeaturedProjects(limit = 3): Observable<Project[]> {
+    return this.getProjects().pipe(
+      map(projects => projects.filter(project => project.featured).slice(0, limit))
+    );
   }
-
 }

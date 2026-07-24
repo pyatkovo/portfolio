@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "deploy": "gh-pages -d dist",
+    "build:pages": "ng build --base-href /portfolio/",
+    "deploy": "npm run build:pages && ngh --dir=dist/portfolio",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
